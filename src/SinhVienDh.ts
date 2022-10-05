@@ -8,7 +8,7 @@ class SinhVienDaiHoc extends SinhVien {
     return numberOne + numberTwo;
   }
 }
-let sv = new SinhVienDaiHoc(1, 'uyen');
+let sv = new SinhVienDaiHoc(1, 'uyen', 123);
 sv.soNamHoc();
 console.log(sv.tongDiem(12, 12));
 
@@ -20,7 +20,7 @@ class DuHS extends SinhVienDaiHoc {
     this.name = n;
   }
 }
-let svnn = new DuHS(2, 'mina ');
+let svnn = new DuHS(2, 'mina ', 456);
 svnn.quocTich();
 svnn.soNamHoc;
 svnn.setName('Lam');
