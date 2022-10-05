@@ -1,12 +1,22 @@
+interface Contact{
+ id:number;
+ name:string; 
+ phone?:number;
+ gender?:string;
+}
+const contacts:Contact[]=[];
 
-export class SinhVien{
-  id:number;
-  name:string;
+export class SinhVien implements Contact{
+   id:number;
+   name:string;
+   phone?:number;
+   gender?:string;
 
-  constructor(i:number, n:string){
+  constructor(i:number, n:string,p?:number,g?:string){
     this.name=n;
     this.id=i;
   }
+
   getName (){
     return this.name;
   }
@@ -24,6 +34,5 @@ export class SinhVien{
  }
 }
 let s = new SinhVien(1,"uyen");
-console.log(s.id);
-console.log(s.name);
+console.log(`${s.id},${s.name}`);
 s.setName("nguyenthilamuyen");
