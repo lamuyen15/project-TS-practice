@@ -3,6 +3,9 @@ import { IDoSinhVienTask } from './IDoSinhVienTask';
 
 export class SinhVien extends Contact implements IDoSinhVienTask {
   masinhvien: number | undefined;
+  CC!: number;
+  GK!: number;
+  CK!: number;
 
   constructor(i: number, n: string, m: number) {
     super();
@@ -10,16 +13,18 @@ export class SinhVien extends Contact implements IDoSinhVienTask {
     this.id = i;
     this.masinhvien = m;
   }
-  diemChuyenCan(): void {
-    throw new Error('Method not implemented.');
+  diemChuyenCan(): number {
+    return this.CC * 0.2;
   }
-  diemTieuLuan(): void {
-    throw new Error('Method not implemented.');
+  diemTieuLuan(): number {
+    return this.GK * 0.3;
   }
-  diemCuoiKy(): void {
-    throw new Error('Method not implemented.');
+  diemCuoiKy(): number {
+    return this.CK * 0.3;
   }
-  tongdiem = (somot: number, sohai: number) => somot + sohai;
+  // tongdiem(TK: number): number {
+  //   return (TK = numberOne + numberTwo + numberThree);
+  // }
   getName() {
     return this.name;
   }
@@ -39,4 +44,4 @@ export class SinhVien extends Contact implements IDoSinhVienTask {
 let s = new SinhVien(1, 'uyen', 123);
 console.log(`${s.id},${s.name},${s.masinhvien}`);
 s.setName('lamuyen');
-console.log(s.tongdiem(1, 2));
+console.log(s.diemChuyenCan(5));
