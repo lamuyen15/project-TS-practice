@@ -19,7 +19,7 @@ export class SinhVien extends Contact implements IDoSinhVienTask {
   diemCuoiKy(): void {
     throw new Error('Method not implemented.');
   }
-
+  tongdiem = (somot: number, sohai: number) => somot + sohai;
   getName() {
     return this.name;
   }
@@ -39,3 +39,4 @@ export class SinhVien extends Contact implements IDoSinhVienTask {
 let s = new SinhVien(1, 'uyen', 123);
 console.log(`${s.id},${s.name},${s.masinhvien}`);
 s.setName('lamuyen');
+console.log(s.tongdiem(1, 2));
