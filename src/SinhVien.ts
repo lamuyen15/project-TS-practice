@@ -44,4 +44,4 @@ export class SinhVien extends Contact implements IDoSinhVienTask {
 let s = new SinhVien(1, 'uyen', 123);
 console.log(`${s.id},${s.name},${s.masinhvien}`);
 s.setName('lamuyen');
-console.log(s.diemChuyenCan(5));
+console.log(s.diemChuyenCan());
